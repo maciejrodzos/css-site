@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Strona CSS | 3 TI</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+
+<body>
+	<div id="wrapper">
+		<header id="header">
+			<div class="inner">
+				<a href="../index.html" class="logo">
+					<span class="symbol"><img src="../images/logo.png" alt="" /></span><span class="title">CSS</span>
+				</a>
+				<nav>
+					<ul>
+						<li>
+							<a href="../index.html#menu">Wstecz</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<nav id="menu">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="index.html">Strona główna</a></li>
+				<li><a href="articles/article1.html">Czcionki</a></li>
+				<li><a href="articles/article2.html">Formatowanie tekstu</a></li>
+				<li><a href="articles/article3.html">Obramowanie</a></li>
+				<li><a href="articles/article4.html">Rozmiary</a></li>
+				<li><a href="articles/article5.html">Tło</a></li>
+				<li><a href="articles/article6.html">Suwaki</a></li>
+				<li><a href="articles/article7.html">Kolory</a></li>
+				<li><a href="articles/article8.html">Tabele</a></li>
+				<li><a href="articles/article9.html">CSS 4</a></li>
+				<li><a href="autors.html">Autorzy</a></li>
+			</ul>
+		</nav>
+		<div id="main">
+			<div class="inner">
+				<h1>Tabele</h1>
+				<span class="image main"><img src="../images/banner.png" alt="" /></span>
+				<h3 style="margin-top: 2em;">Dlaczego za pomocą CSS?</h3>
+				<p>W najnowszych wersjach języka HTML i XHTML atrybuty znacznika <table> odpowiadające za wygląd tabeli zostały oznaczone jako "deprecated" (krytykowane). Oznacza to, że tworzenie kodu z ich użyciem nie jest zalecane. Tak jest np. z atrybutem border odpowiadającym za obramowanie tabeli. Jak więc stworzyć czytelną i ładną tabelę bez użycia tych atrybutów? Między innymi do takich celów stworzono język CSS. My wykorzystamy tylko nieznaczną część jego właściwości.</p>
+				<p>Stworzymy z pomocą CSS-a tabelę, której nadamy cienkie obramowanie, a tekst w poszczególnych komórkach będzie oddalony o 5 pikseli od obramowania. Tabeli przypiszemy "bladożółte" tło. Wyróżnimy także jedną z komórek.</p>
+				<h3 style="margin-top: 2em;">Obramowanie tabeli</h3>
+				<p>Zacznijmy od utworzenia miejsca na nasz kod CSS. Do sekcji &lt;head&gt; dodajemy więc znacznik &lt;style&gt;, w którym będziemy definiowali wygląd naszej tabeli:</p>
+				<pre style="width: 480px"><code>
+&lt;style type="text/css"&gt;
+&lt;!--
+
+--&gt;
+&lt;/style&gt;
+				</code></pre>
+				<p>Chcemy nadać całej tabeli obramowanie o grubości 1 piksela. Tworzymy więc selektor #tabela (odwołuje on się do naszej tabeli, której identyfikator określiliśmy w atrybucie id). Przypisujemy do niego właściwość border umożliwiającą określenie grubości, stylu i koloru obramowania ze wszystkich stron elementu.</p>
+				<pre style="width: 480px"><code>
+#tabela {
+   border: 1px solid black;
+}
+				</code></pre>
+				<p>Pierwszy parametr właściwości border określa grubość obramowania wyrażoną w pikselach, następny to styl obramowania (solid - linia ciągła, dashed - linia przerywana). Ostatni parametr określa kolor obramowania. Efekt tego kodu prezentuje poniższy zrzut:</p>
+				<img src="../images/article8.png"/>
+				<p>To nie jest jednak to, o co nam chodzi. Chcemy, aby wszystkie komórki tabeli miały obramowanie. Musimy więc przypisać właściwość border także do selektora td definiującego komórkę tabeli:</p>
+				<pre style="width: 480px"><code>
+#tabela td {
+   border: 1px solid black;
+}
+				</code></pre>
+				<p>W tym przypadku może dziwić to, po co przed selektorem td znalazł się identyfikator #tabela. To wymusza, aby tylko komórki znajdujące się wewnątrz naszej tabeli były obramowywane. Jeśli pominęlibyśmy pierwszą część selektora, obramowanie byłoby stosowane dla wszystkich komórek we wszystkich tabelach na stronie. A oto efekt:</p>
+				<img src="../images/article8a.png"/>
+				<p>Widzimy nieładnie wyglądający odstęp pomiędzy obramowaniem poszczególnych komórek. Właściwość CSS o nazwie border-collapse umożliwia połączenie dwóch sąsiadujących ze sobą obramowań w jedno. Powinno się ją przypisać do znacznika <table> (wszystkie komórki tabeli odziedziczą tę właściwość). Właściwość border-collapse ma dwie możliwe wartości: seperate (domyślna) i collapse. Wartość collapse złączy dwa sąsiadujące ze sobą obramowania. Do selektora #tabela dodajemy więc odpowiedni kod:</p>
+				<pre style="width: 480px"><code>
+#tabela {
+   border: 1px solid black;
+   border-collapse: collapse;
+}
+				</code></pre>
+				<img src="../images/article8b.png"/>
+				<h3 style="margin-top: 2em;">Wypełnienie komórek</h3>
+				<p>Tabela jest teraz bardziej czytelna, jednak niektórym osobom może przeszkadzać to, że odległość danych w komórce od obramowania jest za mała. Za pomocą cechy padding możemy ustalić wypełnienie komórki (odległość tekstu zawartego w komórce od jej obramowania). Wartość może zostać wyrażona w pikselach. Zwiększmy więc wypełnienie we wszystkich komórkach tabeli, ustawiając je na 5 pikseli (domyślnie 1 piksel). Oto niezbędny kod:</p>
+				<pre style="width: 480px"><code>
+#tabela td {
+   border: 1px solid black;
+   padding: 5px;
+}
+				</code></pre>
+				<p>Przypisanie do właściwości padding jednej wartości oznacza, że wypełnienie o wartości 5 pikseli będzie występowało po wszystkich stronach komórki. Nasza tabela ma teraz taki wygląd:</p>
+				<img src="../images/article8c.png"/>
+				<h3 style="margin-top: 2em;">Kolor tła</h3>
+				<p>Pozostała już tylko zmiana koloru tła dla całej tabeli. Do selektora #tabela dopisujemy więc właściwość background-color, której wartością jest nazwa koloru lub jego wartość szesnastkowa (np. #ffc). Kod selektora wygląda teraz tak:</p>
+				<pre style="width: 480px"><code>
+#tabela {
+   border: 1px solid black;
+   border-collapse: collapse;
+   background-color: #ffc;
+}
+				</code></pre>
+				<img src="../images/article8d.png"/>
+			</div>
+		</div>
+		<footer id="footer">
+			<div class="inner">
+				<ul class="copyright">
+					<li>&copy; 2k16 | Strona CSS | Wszelkie prawa zastrzeżone przez <a href="autors.html">3 TI</a></li>
+					<li>Szablon <a href="https://html5up.net/phantom">Phantom</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>

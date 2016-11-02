@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Strona CSS | 3 TI</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+
+<body>
+	<div id="wrapper">
+		<header id="header">
+			<div class="inner">
+				<a href="../index.html" class="logo">
+					<span class="symbol"><img src="../images/logo.png" alt="" /></span><span class="title">CSS</span>
+				</a>
+				<nav>
+					<ul>
+						<li>
+							<a href="../index.html#menu">Wstecz</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<nav id="menu">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="index.html">Strona główna</a></li>
+				<li><a href="articles/article1.html">Czcionki</a></li>
+				<li><a href="articles/article2.html">Formatowanie tekstu</a></li>
+				<li><a href="articles/article3.html">Obramowanie</a></li>
+				<li><a href="articles/article4.html">Rozmiary</a></li>
+				<li><a href="articles/article5.html">Tło</a></li>
+				<li><a href="articles/article6.html">Suwaki</a></li>
+				<li><a href="articles/article7.html">Kolory</a></li>
+				<li><a href="articles/article8.html">Tabele</a></li>
+				<li><a href="articles/article9.html">CSS 4</a></li>
+				<li><a href="autors.html">Autorzy</a></li>
+			</ul>
+		</nav>
+		<div id="main">
+			<div class="inner">
+				<h1>KOLORY</h1>
+				<span class="image main"><img src="../images/banner.png" alt="" /></span>
+				<h3 style="margin-top: 2em;">Zapis heksadecymalny</h3>
+				<p>zapis heksadecymalny - czyli szesnastkowy, składa się on z sześciu znaków poprzedzonych hashem (#). Pierwsze dwa znaki definiują kolor czerwony, kolejne dwa znaki kolor zielony, ostatnie dwa znaki kolor niebieski. Za pomocą znaków: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F nadajemy intensywność danej barwie. Litery od A do F oznaczają liczby od 10 do 15.</p>
+				<p>Na przykład kolor #FF1023 - barwa zielona ma małą intensywność (10) oraz niebieska ma małą intensywność (23), natomiast barwa czerwona ma najwyższą intensywność (FF), dzięki czemu ten kolor jest czerwony.</p>
+				<pre style="width: 480px"><code>
+div  {
+	background-color:#EFD9F4;
+}
+				</code></pre>
+				<img src="../images/article7a.png"/>
+				<h3 style="margin-top: 2em;">Skrócony zapis heksadecymalny</h3>
+				<p>Skrócony zapis heksadecymalny - niektóre wartości kolorów utworzonych za pomocą zapisu heksadecymalnego możemy zapisać w skrócie, jeżeli każda z trzech barw będzie składała się z dwóch takich samych znaków.</p>
+				<p>Przykłady:</p>
+				<p>&bull;&nbsp;#FF1122 - skrócony zapis to #F12</p>
+				<p>&bull;&nbsp;#11AA22 - skrócony zapis to #1A2</p>
+				<p>&bull;&nbsp;#1122FF - skrócony zapis to #12F</p>
+				<p>&bull;&nbsp;#9834AB - tego zapisu nie da się uprościć</p>
+				<pre style="width: 480px"><code>
+div  {
+	background-color: #FFA;
+}
+				</code></pre>
+				<h3 style="margin-top: 2em;">Zapis rgb</h3>
+				<p>Po trzech kluczowych literach rgb, w nawiasie znajdują się trzy liczby oddzielone od siebie przecinkiem. Każda z tych liczb określa intensywność barw, kolejno: czerwonej, zielonej i niebieskiej. Do określania tej intensywności możemy używać wyłącznie liczb z zakresu 0 - 255 lub wyłącznie wartości procentowych z zakresu 0% - 100%.</p>
+				<p>Przykłady:</p>
+				<p>&bull;&nbsp;rgb(255, 0, 0) - kolor czerwony</p>
+				<p>&bull;&nbsp;rgb(0, 255, 0) - kolor zielony</p>
+				<p>&bull;&nbsp;rgb(0, 0, 255) - kolor niebieski</p>
+				<p>&bull;&nbsp;rgb(100%, 0%, 0%) - kolor czerwony</p>
+				<p>&bull;&nbsp;rgb(0%, 100%, 0%) - kolor zielony</p>
+				<p>&bull;&nbsp;rgb(0%, 0%, 100%) - kolor niebieski</p>
+				<pre style="width: 480px"><code>
+div  {
+	background-color: rgb(173,216,230);
+}
+				</code></pre>
+				<h3 style="margin-top: 2em;">Zapis rgba</h3>
+				<p>Jest podobny do zapisu rgb z tą różnicą, że oczekuje on od nas podania dodatkowego parametru, który określa stopień przezroczystości, czy jak kto woli krycie. Do określenia stopnia przezroczystości możemy używać liczb dziesiętnych z zakresu 0 - 1.0, przy czym wartość 1.0 oznacza pełne krycie, a 0 pełną przezroczystość.</p>
+				<pre style="width: 480px"><code>
+div  {
+	background-color: rgba(173,216,230,0.5);
+}
+				</code></pre>
+				<img src="../images/article7.png" width="60%" height="60%" style="margin: 0 auto;"/>
+				<h3 style="margin-top: 2em;">Zapis hsl</h3>
+				<p>Po trzech kluczowych literach hsl, w nawiasie znajdują się trzy liczby oddzielone od siebie przecinkiem. Pierwsza liczba oznacza barwę. Do jej określenia możemy użyć liczb z zakresu 0 - 360. Barwy zielone mieszczą się w zakresie liczb 0 - 120, barwy niebieskie 120 - 240, a barwy czerwone 240 - 360. Druga liczba oznacza nasycenie danej barwy. Do jej określenia używamy wartości procentowych z zakresu 0% - 100%. Trzecia liczba oznacza jasność danej barwy. Do jej określenia używamy wartości procentowych z zakresu 0% - 100%.</p>
+				<pre style="width: 480px"><code>
+div  {
+	background-color: hsl(20,50%,70%);
+}
+				</code></pre>
+				<h3 style="margin-top: 2em;">Zapis hsla</h3>
+				<p>Jest podobny do zapisu hsl z tą różnicą, że oczekuje on od nas podania dodatkowego parametru, który określa stopień przezroczystości, czy jak kto woli krycie. Do określenia stopnia przezroczystości możemy używać liczb dziesiętnych z zakresu 0 - 1.0, przy czym wartość 1.0 oznacza pełne krycie, a 0 pełną przezroczystość.</p>
+				<pre style="width: 480px"><code>
+div  {
+	background-color: hsla(20, 50%, 70%, 0.5);
+}
+				</code></pre>
+			</div>
+		</div>
+		<footer id="footer">
+			<div class="inner">
+				<ul class="copyright">
+					<li>&copy; 2k16 | Strona CSS | Wszelkie prawa zastrzeżone przez <a href="autors.html">3 TI</a></li>
+					<li>Szablon <a href="https://html5up.net/phantom">Phantom</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>

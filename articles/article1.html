@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Strona CSS | 3 TI</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+
+<body>
+	<div id="wrapper">
+		<header id="header">
+			<div class="inner">
+				<a href="../index.html" class="logo">
+					<span class="symbol"><img src="../images/logo.png" alt="" /></span><span class="title">CSS</span>
+				</a>
+				<nav>
+					<ul>
+						<li>
+							<a href="../index.html#menu">Wstecz</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<nav id="menu">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="index.html">Strona główna</a></li>
+				<li><a href="articles/article1.html">Czcionki</a></li>
+				<li><a href="articles/article2.html">Formatowanie tekstu</a></li>
+				<li><a href="articles/article3.html">Obramowanie</a></li>
+				<li><a href="articles/article4.html">Rozmiary</a></li>
+				<li><a href="articles/article5.html">Tło</a></li>
+				<li><a href="articles/article6.html">Suwaki</a></li>
+				<li><a href="articles/article7.html">Kolory</a></li>
+				<li><a href="articles/article8.html">Tabele</a></li>
+				<li><a href="articles/article9.html">CSS 4</a></li>
+				<li><a href="autors.html">Autorzy</a></li>
+			</ul>
+		</nav>
+		<div id="main">
+			<div class="inner">
+				<h1>CZCIONKI</h1>
+				<span class="image main"><img src="../images/banner.png" alt="" /></span>
+				<p>Zanim zaczniemy zagłębiać się w sposobach formatowania tekstu, musimy się trochę więcej dowiedzieć o czcionkach, czy jak kto woli krojach pisma.</p>
+				<p>Rozróżniamy 5 rodzajów czcionek, które wyglądają następująco: </p>
+				<img src="../images/article1.png" />
+				<p>Wcześniej wspominaliśmy o tym, że aby czcionka została prawidłowo wyświetlona na naszym ekranie, musi być ona najpierw zainstalowana na naszym systemie operacyjnym. Można oczywiście samemu pobierać i instalować czcionki, ale większość użytkowników
+					tego nie robi. To skąd mamy wiedzieć, czy dana czcionka zostanie prawidłowo wyświetlona na urządzeniu naszego odbiorcy, skoro na każdym systemie operacyjnym mamy inny zestaw dostępnych czcionek? Tu właśnie pojawia się problem zgodności pomiędzy systemami
+					operacyjnymi. Możemy to w zasadzie obejść na dwa sposoby. Możemy użyć czcionek, które są dostępne na większości urządzeń (ang. Web Safe Fonts), bądź możemy dodać konkretną czcionkę na naszą stronę internetową, tak aby każdy użytkownik bez konieczności
+					instalowania, mógł z niej korzystać na naszej stronie. Zapoznajmy się z tzw. bezpiecznymi czcionkami oraz sposobami dodawania czcionek na stronę.</p>
+				<pre style="width: 480px"><code>
+font-family: Arial;
+font-family: 'Century Gothic';
+font-family: 'Courier New';
+font-family: 'Copperplate Gothic Light';
+font-family: Georgia;
+font-family: Impact;
+font-family: 'Lucida Console';
+font-family: 'Lucida Sans Unicode';
+font-family: 'Palatino Linotype';
+font-family: Tahoma;
+font-family: 'Times New Roman';
+font-family: 'Trebuchet MS';
+font-family: Verdana;
+				</code></pre>
+				<p>Wyżej wymienione czcionki wyglądają następująco: </p>
+				<img src="../images/article1a.png" />
+				<br/>
+				<h3 style="margin-top: 2em;">Implementowanie czcionki</h3>
+				<p>
+					Wraz z pojawieniem się CSS3 wprowadzono również możliwość dołączania czcionki w oddzielnym pliku. Czcionka nie zostanie zainstalowana na naszym komputerze, będziemy jedynie korzystać z niej w czasie odwiedzania danej strony. Nie będziemy tu dokładnie
+					omawiać sposobu jej dołączania, bo to temat na oddzielny artykuł zademonstrujemy jedynie w jaki sposób można tego dokonać.
+				</p>
+				<p>
+					Czcionkę pobieramy z internetu, a następnie pliki z czcionką dodajemy do naszej strony. W pliku głównym CSS dodajemy odwołania do plików czcionki poprzez zastosowanie własności @font-face. Musimy pamiętać, aby odwołania z pliku CSS zgadzały się z faktycznym
+					miejscem przechowywania plików czcionki.
+				</p>
+				<h3 style="margin-top: 2em;">Google Fonts</h3>
+				<p>
+					Znacznie szybciej i wygodniej dodamy czcionki na swoją stronę przy pomocy takich projektów jak <a href="https://fonts.google.com" target="_blank">Google Fonts</a>. W tym google’owski projekcie dostępnych jest kilkaset darmowych czcionek gotowych
+					do zaimplementowania na naszą stronę. Podane są tam dokładne instrukcje jak tego dokonać, także myślę, że nie trzeba dłużej tego tłumaczyć.
+				</p>
+			</div>
+		</div>
+		<footer id="footer">
+			<div class="inner">
+				<ul class="copyright">
+					<li>&copy; 2k16 | Strona CSS | Wszelkie prawa zastrzeżone przez <a href="autors.html">3 TI</a></li>
+					<li>Szablon <a href="https://html5up.net/phantom">Phantom</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>

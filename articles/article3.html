@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Strona CSS | 3 TI</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+
+<body>
+	<div id="wrapper">
+		<header id="header">
+			<div class="inner">
+				<a href="../index.html" class="logo">
+					<span class="symbol"><img src="../images/logo.png" alt="" /></span><span class="title">CSS</span>
+				</a>
+				<nav>
+					<ul>
+						<li>
+							<a href="../index.html#menu">Wstecz</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<nav id="menu">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="index.html">Strona główna</a></li>
+				<li><a href="articles/article1.html">Czcionki</a></li>
+				<li><a href="articles/article2.html">Formatowanie tekstu</a></li>
+				<li><a href="articles/article3.html">Obramowanie</a></li>
+				<li><a href="articles/article4.html">Rozmiary</a></li>
+				<li><a href="articles/article5.html">Tło</a></li>
+				<li><a href="articles/article6.html">Suwaki</a></li>
+				<li><a href="articles/article7.html">Kolory</a></li>
+				<li><a href="articles/article8.html">Tabele</a></li>
+				<li><a href="articles/article9.html">CSS 4</a></li>
+				<li><a href="autors.html">Autorzy</a></li>
+			</ul>
+		</nav>
+		<div id="main">
+			<div class="inner">
+				<h1>Obramowanie</h1>
+				<span class="image main"><img src="../images/banner.png" alt="" /></span>
+				<h3 style="margin-top: 2em;">border-width</h3>
+				<p>
+					Za pomocą właściwości border-width możemy ustalić szerokość (grubość) obramowania jednocześnie po kilku stronach elementu HTML.
+				</p>
+				<pre style="width: 480px"><code>
+div {
+	border-width: 5px;
+}
+				</code></pre>
+				<pre style="width: 480px"><code>
+div {
+	border-top-width: 5px;
+	border-right-width: 10px;
+	border-bottom-width: 15px;
+	border-left-width: 20px;
+}
+				</code></pre>
+				<h3 style="margin-top: 2em;">border-style</h3>
+				<img src="../images/article3.png" />
+				<pre style="width: 480px"><code>
+div {
+	border-style: solid;
+}
+				</code></pre>
+				<pre style="width: 480px"><code>
+div {
+	border-top-style: solid;
+	border-right-style: dotted;
+	border-bottom-style: double;
+	border-left-style: dashed;
+}
+				</code></pre>
+				<h3 style="margin-top: 2em;">border-color</h3>
+				<pre style="width: 480px"><code>
+div {
+	border-color: blue;
+}
+				</code></pre>
+				<pre style="width: 480px"><code>
+div {
+	border-top-color: red;
+	border-right-color: blue;
+	border-bottom-color: green;
+	border-left-color: yellow;
+}
+				</code></pre>
+			</div>
+		</div>
+		<footer id="footer">
+			<div class="inner">
+				<ul class="copyright">
+					<li>&copy; 2k16 | Strona CSS | Wszelkie prawa zastrzeżone przez <a href="autors.html">3 TI</a></li>
+					<li>Szablon <a href="https://html5up.net/phantom">Phantom</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>

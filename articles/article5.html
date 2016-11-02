@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Strona CSS | 3 TI</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+
+<body>
+	<div id="wrapper">
+		<header id="header">
+			<div class="inner">
+				<a href="../index.html" class="logo">
+					<span class="symbol"><img src="../images/logo.png" alt="" /></span><span class="title">CSS</span>
+				</a>
+				<nav>
+					<ul>
+						<li>
+							<a href="../index.html#menu">Wstecz</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<nav id="menu">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="index.html">Strona główna</a></li>
+				<li><a href="articles/article1.html">Czcionki</a></li>
+				<li><a href="articles/article2.html">Formatowanie tekstu</a></li>
+				<li><a href="articles/article3.html">Obramowanie</a></li>
+				<li><a href="articles/article4.html">Rozmiary</a></li>
+				<li><a href="articles/article5.html">Tło</a></li>
+				<li><a href="articles/article6.html">Suwaki</a></li>
+				<li><a href="articles/article7.html">Kolory</a></li>
+				<li><a href="articles/article8.html">Tabele</a></li>
+				<li><a href="articles/article9.html">CSS 4</a></li>
+				<li><a href="autors.html">Autorzy</a></li>
+			</ul>
+		</nav>
+		<div id="main">
+			<div class="inner">
+				<h1>TŁO</h1>
+				<span class="image main"><img src="../images/banner.png" alt="" /></span>
+				<h3 style="margin-top: 2em;">Background</h3>
+				<p>Za pomocą właściwości background możemy jednocześnie użyć kilku wartości opisujących właściwości tła dla danego elementu HTML, dzięki czemu nasz kod stanie się nieco krótszy. </p>
+				<h3 style="margin-top: 2em;">Background-color</h3>
+				<p>Za pomocą właściwości background-color możemy zmienić kolor tła w danym elemencie HTML. </p>
+				<pre style="width: 480px"><code>
+div {
+	background-color: #888;
+}
+				</code></pre>
+				<h3 style="margin-top: 2em;">Background-image</h3>
+				<p>Za pomocą właściwości background-image możemy wypełnić tło elementu HTML dowolnym obrazkiem, np. obrazkiem o formacie .png, .jpg, .gif.</p>
+				<p>Za pomocą właściwości background-image możemy również wypełnić tło elementu HTML gradientem liniowym albo promienistym lub powtarzającym się gradientem liniowym albo promienistym.</p>
+				<pre style="width: 480px"><code>
+div {
+	background-image: url(background.png);
+}
+				</code></pre>
+				<h3 style="margin-top: 2em;">Background-position</h3>
+				<p>Za pomocą właściwości background-position możemy precyzyjniej określić pozycję obrazka w tle danego elementu HTML. </p>
+				<pre style="width: 480px"><code>
+div {
+	background-position:180px 10px;
+}
+				</code></pre>
+				<h3 style="margin-top: 2em;">Background-size</h3>
+				<p>Za pomocą właściwości background-size możemy określić rozmiar obrazka w tle danego elementu HTML. </p>
+				
+				<pre style="width: 480px"><code>
+div {
+	background-size: 75% 50%;
+}
+				</code></pre>
+				<h3 style="margin-top: 2em;">Background-repeat</h3>
+				<p>Za pomocą właściwości background-repeat możemy określić sposób powtarzania się obrazka w tle danego elementu HTML. </p>
+				<pre style="width: 480px"><code>
+div {
+	background-repeat: repeat-x;
+}
+				</code></pre>
+				<h3 style="margin-top: 2em;">Background-attachment</h3>
+				<p>Za pomocą właściwości background-attachment możemy określić w jaki sposób ma zachowywać się tło obrazkowe w danym elemencie HTML, w momencie gdy będziemy przewijać zawartość strony za pomocą prawego bądź dolnego suwaka przeglądarki internetowej lub w momencie gdy będziemy przewijać zawartość danego elementu HTML za pomocą prawego bądź dolnego suwaka.</p>
+								<pre style="width: 480px"><code>
+div {
+	background-attachment: fixed;
+}
+				</code></pre>
+			</div>
+		</div>
+		<footer id="footer">
+			<div class="inner">
+				<ul class="copyright">
+					<li>&copy; 2k16 | Strona CSS | Wszelkie prawa zastrzeżone przez <a href="autors.html">3 TI</a></li>
+					<li>Szablon <a href="https://html5up.net/phantom">Phantom</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>
